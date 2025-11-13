@@ -1,5 +1,6 @@
 import { Target, Eye, Heart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import productsImg from "@/assets/products.jpg";
 
 const About = () => {
   const values = [
@@ -36,6 +37,17 @@ const About = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Conheça nossa missão, visão e valores que nos guiam na busca pela excelência
           </p>
+        </div>
+
+        {/* Image Section */}
+        <div className="max-w-4xl mx-auto mb-16 animate-fade-in">
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={productsImg}
+              alt="Equipamentos de proteção individual - EPIs de qualidade"
+              className="w-full h-[400px] object-cover"
+            />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
