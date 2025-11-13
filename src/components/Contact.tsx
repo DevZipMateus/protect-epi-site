@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import partnershipImg from "@/assets/partnership.jpg";
 
 const Contact = () => {
   const contactInfo = [
@@ -80,8 +81,16 @@ const Contact = () => {
           </div>
 
           <div className="text-center animate-fade-in">
-            <Card className="border-2 border-accent/30 bg-gradient-to-br from-accent/5 to-accent/10">
-              <CardContent className="p-8">
+            <Card className="border-2 border-accent/30 bg-gradient-to-br from-accent/5 to-accent/10 overflow-hidden">
+              <div className="relative h-64 md:h-80">
+                <img
+                  src={partnershipImg}
+                  alt="Parceria profissional em segurança do trabalho"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/20"></div>
+              </div>
+              <CardContent className="p-8 -mt-20 relative z-10">
                 <h3 className="text-2xl font-bold text-primary mb-4">
                   Solicite um orçamento sem compromisso
                 </h3>
