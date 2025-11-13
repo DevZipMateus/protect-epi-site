@@ -41,8 +41,8 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-md"
-          : "bg-transparent"
+          ? "bg-header/95 backdrop-blur-md shadow-md"
+          : "bg-header"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -55,8 +55,8 @@ const Header = () => {
               className="h-12 w-12 object-contain"
             />
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-primary">PROTECT EPI</span>
-              <span className="text-xs text-muted-foreground">Sua proteção, nossa missão</span>
+              <span className="text-xl font-bold text-white">PROTECT EPI</span>
+              <span className="text-xs text-white/70">Sua proteção, nossa missão</span>
             </div>
           </div>
 
@@ -66,7 +66,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                className="text-white/90 hover:text-white transition-colors duration-200 font-medium"
               >
                 {item.label}
               </button>
@@ -81,7 +81,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className="md:hidden text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Menu"
           >
@@ -92,13 +92,13 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-background border-t border-border shadow-lg">
+        <div className="md:hidden bg-header border-t border-white/10 shadow-lg">
           <nav className="container mx-auto px-4 py-6 flex flex-col gap-4">
             {menuItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-left text-foreground hover:text-primary transition-colors duration-200 font-medium py-2"
+                className="text-left text-white/90 hover:text-white transition-colors duration-200 font-medium py-2"
               >
                 {item.label}
               </button>
