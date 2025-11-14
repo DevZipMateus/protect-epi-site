@@ -15,12 +15,12 @@ const Vitrine = () => {
   }, []);
 
   return (
-    <div className="h-screen w-full overflow-hidden">
+    <div className="h-screen w-full overflow-hidden fixed inset-0">
       {/* Header fixo - 80px */}
       <Header />
       
-      {/* Espaçamento para compensar o header fixo */}
-      <div className="pt-20 h-full flex flex-col">
+      {/* Container principal sem scroll */}
+      <div className="pt-20 h-full flex flex-col overflow-hidden">
         {/* Iframe - altura calculada dinamicamente */}
         <iframe 
           src="https://protectepi.egestor.com.br/vitrine/" 
