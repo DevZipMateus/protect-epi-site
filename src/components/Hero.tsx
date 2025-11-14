@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Shield, CheckCircle2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
+import logoHero from "@/assets/logo-hero.png";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -43,9 +44,12 @@ const Hero = () => {
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
-            PROTECT EPI
-          </h1>
+          <h1 className="sr-only">PROTECT EPI</h1>
+          <img 
+            src={logoHero} 
+            alt="PROTECT EPI" 
+            className="w-full max-w-2xl mx-auto mb-6 animate-fade-in brightness-0 invert"
+          />
 
           <h2 className="text-2xl md:text-3xl text-white/90 mb-8 animate-fade-in font-light">
             Proteger quem trabalha é nossa missão
