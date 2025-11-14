@@ -30,11 +30,13 @@ const Footer = () => {
           {/* Logo e Slogan */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img
-                src={logo}
-                alt="PROTECT EPI"
-                className="h-12 w-12 object-contain"
-              />
+              <div className="bg-white rounded-full p-1 flex items-center justify-center">
+                <img
+                  src={logo}
+                  alt="PROTECT EPI"
+                  className="h-12 w-12 object-contain"
+                />
+              </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold">PROTECT EPI</span>
                 <span className="text-sm text-primary-foreground/80">
