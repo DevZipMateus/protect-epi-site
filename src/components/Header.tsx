@@ -38,23 +38,21 @@ const Header = () => {
     label: "Contato",
     id: "contact"
   }];
-  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-header/95 backdrop-blur-md shadow-md" : "bg-header"}`}>
+  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-white"}`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="bg-white rounded-full p-1 flex items-center justify-center">
-              <img src={logo} alt="PROTECT EPI - Equipamentos de proteção individual" className="h-28 w-28 object-contain" />
-            </div>
+            <img src={logo} alt="PROTECT EPI - Equipamentos de proteção individual" className="h-28 w-28 object-contain" />
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-white">PROTECT EPI</span>
-              <span className="text-xs text-white/70">Sua proteção, nossa missão</span>
+              <span className="text-xl font-bold text-primary">PROTECT EPI</span>
+              <span className="text-xs text-muted-foreground">Sua proteção, nossa missão</span>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {menuItems.map(item => <button key={item.id} onClick={() => scrollToSection(item.id)} className="text-white/90 hover:text-white transition-colors duration-200 font-medium">
+            {menuItems.map(item => <button key={item.id} onClick={() => scrollToSection(item.id)} className="text-foreground/80 hover:text-foreground transition-colors duration-200 font-medium">
                 {item.label}
               </button>)}
             <Button onClick={() => scrollToSection("contact")} className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-md hover:shadow-glow transition-all duration-300">
@@ -63,16 +61,16 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden text-white" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Menu">
+          <button className="md:hidden text-foreground" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Menu">
             {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && <div className="md:hidden bg-header border-t border-white/10 shadow-lg">
+      {isMobileMenuOpen && <div className="md:hidden bg-white border-t border-border shadow-lg">
           <nav className="container mx-auto px-4 py-6 flex flex-col gap-4">
-            {menuItems.map(item => <button key={item.id} onClick={() => scrollToSection(item.id)} className="text-left text-white/90 hover:text-white transition-colors duration-200 font-medium py-2">
+            {menuItems.map(item => <button key={item.id} onClick={() => scrollToSection(item.id)} className="text-left text-foreground/80 hover:text-foreground transition-colors duration-200 font-medium py-2">
                 {item.label}
               </button>)}
             <Button onClick={() => scrollToSection("contact")} className="bg-accent hover:bg-accent/90 text-accent-foreground w-full">
