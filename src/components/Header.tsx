@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Shield } from "lucide-react";
 import logo from "@/assets/logo.png";
 const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   useEffect(() => {
@@ -15,21 +16,37 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   const handleNavigation = (id: string, isRoute?: boolean) => {
+    setIsMobileMenuOpen(false);
+    
     if (isRoute) {
+      // Se for uma rota, simplesmente navega
       navigate(`/${id}`);
-      setIsMobileMenuOpen(false);
     } else {
-      const element = document.getElementById(id);
-      if (element) {
-        const offset = 80;
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - offset;
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth"
-        });
-        setIsMobileMenuOpen(false);
+      // Se for uma seção, verifica se estamos na home
+      if (location.pathname === "/") {
+        // Estamos na home, faz scroll direto
+        scrollToSection(id);
+      } else {
+        // Não estamos na home, navega para home e depois faz scroll
+        navigate("/");
+        // Aguarda um pequeno delay para a página carregar e então faz scroll
+        setTimeout(() => {
+          scrollToSection(id);
+        }, 100);
       }
+    }
+  };
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
     }
   };
   const menuItems = [{
