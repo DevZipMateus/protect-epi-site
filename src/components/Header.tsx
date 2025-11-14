@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Shield } from "lucide-react";
 import logo from "@/assets/logo.png";
 const Header = () => {
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   useEffect(() => {
@@ -12,17 +14,22 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
+  const handleNavigation = (id: string, isRoute?: boolean) => {
+    if (isRoute) {
+      navigate(`/${id}`);
       setIsMobileMenuOpen(false);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        const offset = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
+        setIsMobileMenuOpen(false);
+      }
     }
   };
   const menuItems = [{
@@ -34,6 +41,10 @@ const Header = () => {
   }, {
     label: "Serviços",
     id: "services"
+  }, {
+    label: "Vitrine",
+    id: "vitrine",
+    isRoute: true
   }, {
     label: "Contato",
     id: "contact"
@@ -48,10 +59,10 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {menuItems.map(item => <button key={item.id} onClick={() => scrollToSection(item.id)} className="text-foreground/80 hover:text-foreground transition-colors duration-200 font-medium">
+            {menuItems.map(item => <button key={item.id} onClick={() => handleNavigation(item.id, item.isRoute)} className="text-foreground/80 hover:text-foreground transition-colors duration-200 font-medium">
                 {item.label}
               </button>)}
-            <Button onClick={() => scrollToSection("contact")} className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-md hover:shadow-glow transition-all duration-300">
+            <Button onClick={() => handleNavigation("contact")} className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-md hover:shadow-glow transition-all duration-300">
               Fale conosco
             </Button>
           </nav>
@@ -66,10 +77,10 @@ const Header = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && <div className="md:hidden bg-white border-t border-border shadow-lg">
           <nav className="container mx-auto px-4 py-6 flex flex-col gap-4">
-            {menuItems.map(item => <button key={item.id} onClick={() => scrollToSection(item.id)} className="text-left text-foreground/80 hover:text-foreground transition-colors duration-200 font-medium py-2">
+            {menuItems.map(item => <button key={item.id} onClick={() => handleNavigation(item.id, item.isRoute)} className="text-left text-foreground/80 hover:text-foreground transition-colors duration-200 font-medium py-2">
                 {item.label}
               </button>)}
-            <Button onClick={() => scrollToSection("contact")} className="bg-accent hover:bg-accent/90 text-accent-foreground w-full">
+            <Button onClick={() => handleNavigation("contact")} className="bg-accent hover:bg-accent/90 text-accent-foreground w-full">
               Fale conosco
             </Button>
           </nav>
