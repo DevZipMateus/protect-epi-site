@@ -19,19 +19,11 @@ const Vitrine = () => {
           title="Demonstração de Vitrine"
         />
         
-        {/* Badge inferior - 63px - Estilo Lovable */}
-        <div className="h-[63px] w-full bg-[#1A1F2C] flex items-center justify-center">
-          <a 
-            href="https://montesite.com.br" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm text-white/90 hover:text-white transition-colors"
-          >
-            <span>Desenvolvido por</span>
-            <span className="font-semibold bg-gradient-to-r from-[#8B5CF6] to-[#D946EF] bg-clip-text text-transparent">
-              Monte Site
-            </span>
-          </a>
+        {/* Badge inferior - 63px */}
+        <div className="h-[63px] w-full bg-[#E5E5E5] flex items-center justify-center">
+          <p className="text-sm text-black">
+            Desenvolvido por <span className="font-semibold text-[#0000FF]">MonteSite</span>
+          </p>
         </div>
       </div>
     </div>
