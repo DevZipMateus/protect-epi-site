@@ -20,7 +20,11 @@ const Vitrine = () => {
         />
         
         {/* Badge inferior - 63px */}
-        <div className="h-[63px] w-full" />
+        <div className="h-[63px] w-full bg-background border-t border-border flex items-center justify-center">
+          <p className="text-sm text-muted-foreground">
+            Desenvolvido por <span className="font-semibold text-foreground">Monte Site</span>
+          </p>
+        </div>
       </div>
     </div>
   );
