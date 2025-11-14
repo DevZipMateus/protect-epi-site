@@ -20,26 +20,16 @@ const Vitrine = () => {
         />
         
         {/* Badge inferior - 63px */}
-        <div className="h-[63px] w-full bg-[#1A1F2C] flex items-center justify-center">
-          <div className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="url(#gradient1)" />
-              <path d="M2 17L12 22L22 17V7L12 12L2 7V17Z" fill="url(#gradient2)" />
-              <defs>
-                <linearGradient id="gradient1" x1="2" y1="7" x2="22" y2="7" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#8B5CF6" />
-                  <stop offset="1" stopColor="#D946EF" />
-                </linearGradient>
-                <linearGradient id="gradient2" x1="2" y1="14.5" x2="22" y2="14.5" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#6366F1" />
-                  <stop offset="1" stopColor="#8B5CF6" />
-                </linearGradient>
-              </defs>
-            </svg>
-            <p className="text-sm text-white font-medium">
-              Desenvolvido por <span className="font-bold">Monte Site</span>
-            </p>
-          </div>
+        <div className="h-[63px] w-full bg-white border-t border-border flex items-center justify-center">
+          <a 
+            href="https://montesite.com.br" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          >
+            <span>Desenvolvido por</span>
+            <span className="font-semibold text-foreground">Monte Site</span>
+          </a>
         </div>
       </div>
     </div>
