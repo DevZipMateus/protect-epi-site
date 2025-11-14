@@ -44,10 +44,6 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img src={logo} alt="PROTECT EPI - Equipamentos de proteção individual" className="h-28 w-28 object-contain" />
-            <div className="flex flex-col">
-              <span className="text-xl font-bold text-primary">PROTECT EPI</span>
-              <span className="text-xs text-muted-foreground">Sua proteção, nossa missão</span>
-            </div>
           </div>
 
           {/* Desktop Navigation */}
