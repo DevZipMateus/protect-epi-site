@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Shield, CheckCircle2 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
+  const navigate = useNavigate();
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     if (element) {
@@ -74,8 +76,15 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
             <Button
               size="lg"
-              onClick={scrollToContact}
+              onClick={() => navigate("/vitrine")}
               className="bg-accent hover:bg-accent/90 text-white text-lg px-8 py-6 shadow-glow hover:scale-105 transition-all duration-300"
+            >
+              Ver nossa vitrine
+            </Button>
+            <Button
+              size="lg"
+              onClick={scrollToContact}
+              className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/60 hover:border-white text-lg px-8 py-6 backdrop-blur-sm transition-all duration-300"
             >
               Solicite um orçamento
             </Button>
