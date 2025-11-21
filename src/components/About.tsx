@@ -30,22 +30,22 @@ const About = () => {
   return (
     <section id="about" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 px-4">
             Sobre nós
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
             Conheça nossa missão, visão e valores que nos guiam na busca pela excelência
           </p>
         </div>
 
         {/* Image Section */}
-        <div className="max-w-4xl mx-auto mb-16 animate-fade-in">
+        <div className="max-w-4xl mx-auto mb-12 sm:mb-16 animate-fade-in px-4">
           <div className="rounded-2xl overflow-hidden shadow-lg">
             <img
               src={productsImg}
               alt="Equipamentos de proteção individual - EPIs de qualidade"
-              className="w-full h-[400px] object-cover"
+              className="w-full h-[250px] sm:h-[350px] md:h-[400px] object-cover"
             />
           </div>
         </div>

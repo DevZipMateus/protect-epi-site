@@ -32,16 +32,16 @@ const Services = () => {
   return (
     <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 px-4">
             Nossos serviços
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
             Soluções completas em equipamentos de proteção individual para sua empresa
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -51,20 +51,20 @@ const Services = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Image */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-40 sm:h-48 overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent"></div>
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-accent/10 backdrop-blur-sm p-4 rounded-full border-2 border-accent/30">
-                    <Icon className="w-10 h-10 text-accent" />
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-accent/10 backdrop-blur-sm p-3 sm:p-4 rounded-full border-2 border-accent/30">
+                    <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-accent" />
                   </div>
                 </div>
                 
                 <CardHeader>
-                  <CardTitle className="text-2xl font-bold text-primary text-center">
+                  <CardTitle className="text-xl sm:text-2xl font-bold text-primary text-center">
                     {service.title}
                   </CardTitle>
                 </CardHeader>

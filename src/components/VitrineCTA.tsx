@@ -16,22 +16,22 @@ const VitrineCTA = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12 animate-fade-in">
-            <div className="flex justify-center mb-6">
-              <div className="bg-accent/20 backdrop-blur-sm p-4 rounded-full">
-                <ShoppingBag className="w-12 h-12 text-accent" />
+          <div className="text-center mb-8 sm:mb-12 animate-fade-in">
+            <div className="flex justify-center mb-4 sm:mb-6">
+              <div className="bg-accent/20 backdrop-blur-sm p-3 sm:p-4 rounded-full">
+                <ShoppingBag className="w-10 h-10 sm:w-12 sm:h-12 text-accent" />
               </div>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Conheça Nossa Vitrine Online
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 px-4">
+              Conheça nossa vitrine online
             </h2>
-            <p className="text-xl text-white/80 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto px-4">
               Explore nosso catálogo completo de EPIs com preços atualizados em tempo real
             </p>
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
             {[
               {
                 icon: Eye,
@@ -51,17 +51,17 @@ const VitrineCTA = () => {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 animate-fade-in"
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 animate-fade-in"
               >
-                <div className="flex justify-center mb-4">
-                  <div className="bg-accent/20 p-3 rounded-lg">
-                    <feature.icon className="w-8 h-8 text-accent" />
+                <div className="flex justify-center mb-3 sm:mb-4">
+                  <div className="bg-accent/20 p-2 sm:p-3 rounded-lg">
+                    <feature.icon className="w-6 h-6 sm:w-8 sm:h-8 text-accent" />
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 text-center">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-2 text-center">
                   {feature.title}
                 </h3>
-                <p className="text-white/70 text-center text-sm">
+                <p className="text-white/70 text-center text-xs sm:text-sm">
                   {feature.description}
                 </p>
               </div>
@@ -69,16 +69,16 @@ const VitrineCTA = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="text-center animate-fade-in">
+          <div className="text-center animate-fade-in px-4">
             <Button
               size="lg"
               onClick={() => navigate("/vitrine")}
-              className="bg-accent hover:bg-accent/90 text-white text-xl px-12 py-8 shadow-glow hover:scale-105 transition-all duration-300 group"
+              className="bg-accent hover:bg-accent/90 text-white text-lg sm:text-xl px-8 py-6 sm:px-12 sm:py-8 shadow-glow hover:scale-105 transition-all duration-300 group w-full sm:w-auto"
             >
-              Acessar Vitrine Agora
-              <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-2 transition-transform" />
+              Acessar vitrine agora
+              <ArrowRight className="ml-2 w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform" />
             </Button>
-            <p className="text-white/60 mt-4 text-sm">
+            <p className="text-white/60 mt-4 text-xs sm:text-sm">
               Navegação fácil • Preços competitivos • Atendimento especializado
             </p>
           </div>

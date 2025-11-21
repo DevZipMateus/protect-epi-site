@@ -42,19 +42,19 @@ const Hero = () => {
           <img 
             src={logoHero} 
             alt="PROTECT EPI" 
-            className="w-full max-w-2xl mx-auto mb-6 animate-fade-in brightness-0 invert"
+            className="w-full max-w-sm sm:max-w-md md:max-w-2xl mx-auto mb-4 sm:mb-6 animate-fade-in brightness-0 invert"
           />
 
-          <h2 className="text-2xl md:text-3xl text-white/90 mb-8 animate-fade-in font-light">
+          <h2 className="text-xl sm:text-2xl md:text-3xl text-white/90 mb-6 sm:mb-8 animate-fade-in font-light px-4">
             Proteger quem trabalha é nossa missão
           </h2>
 
-          <p className="text-lg md:text-xl text-white/80 mb-12 max-w-2xl mx-auto animate-fade-in leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-white/80 mb-8 sm:mb-12 max-w-2xl mx-auto animate-fade-in leading-relaxed px-4">
             Oferecemos EPIs de qualidade que garantem segurança, conforto e confiança no dia a dia de trabalho
           </p>
 
           {/* Features */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 animate-fade-in">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 mb-8 sm:mb-12 animate-fade-in px-4">
             {[
               "Produtos certificados",
               "Atendimento personalizado",
@@ -62,34 +62,34 @@ const Hero = () => {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg py-4 px-6 hover:bg-white/20 transition-all duration-300"
+                className="flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm rounded-lg py-3 px-4 sm:py-4 sm:px-6 hover:bg-white/20 transition-all duration-300"
               >
-                <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
-                <span className="text-white font-medium">{feature}</span>
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0" />
+                <span className="text-white font-medium text-sm sm:text-base">{feature}</span>
               </div>
             ))}
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fade-in px-4">
             <Button
               size="lg"
               onClick={() => navigate("/vitrine")}
-              className="bg-accent hover:bg-accent/90 text-white text-lg px-8 py-6 shadow-glow hover:scale-105 transition-all duration-300"
+              className="bg-accent hover:bg-accent/90 text-white text-base sm:text-lg px-6 py-5 sm:px-8 sm:py-6 shadow-glow hover:scale-105 transition-all duration-300"
             >
               Ver nossa vitrine
             </Button>
             <Button
               size="lg"
               onClick={scrollToContact}
-              className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/60 hover:border-white text-lg px-8 py-6 backdrop-blur-sm transition-all duration-300"
+              className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/60 hover:border-white text-base sm:text-lg px-6 py-5 sm:px-8 sm:py-6 backdrop-blur-sm transition-all duration-300"
             >
               Solicite um orçamento
             </Button>
             <Button
               size="lg"
               asChild
-              className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/60 hover:border-white text-lg px-8 py-6 backdrop-blur-sm transition-all duration-300"
+              className="bg-white/10 hover:bg-white/20 text-white border-2 border-white/60 hover:border-white text-base sm:text-lg px-6 py-5 sm:px-8 sm:py-6 backdrop-blur-sm transition-all duration-300"
             >
               <a
                 href="https://wa.me/5517996777841"
