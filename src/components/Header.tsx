@@ -17,7 +17,6 @@ const Header = () => {
   }, []);
   const handleNavigation = (id: string, isRoute?: boolean) => {
     setIsMobileMenuOpen(false);
-    
     if (isRoute) {
       // Se for uma rota, simplesmente navega
       navigate(`/${id}`);
@@ -36,7 +35,6 @@ const Header = () => {
       }
     }
   };
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -71,7 +69,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <img src={logo} alt="PROTECT EPI - Equipamentos de proteção individual" className="h-28 w-28 object-contain" />
+            <img src={logo} alt="PROTECT EPI - Equipamentos de proteção individual" className="h-26 w-24 object-contain" />
           </div>
 
           {/* Desktop Navigation */}
