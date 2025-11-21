@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Shield, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 import logoHero from "@/assets/logo-hero.png";
@@ -38,12 +38,6 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="flex justify-center mb-6 animate-scale-in">
-            <div className="bg-accent/20 backdrop-blur-sm p-4 rounded-full">
-              <Shield className="w-16 h-16 text-accent" />
-            </div>
-          </div>
-
           <h1 className="sr-only">PROTECT EPI</h1>
           <img 
             src={logoHero} 
