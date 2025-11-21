@@ -57,7 +57,7 @@ const Header = () => {
     label: "Serviços",
     id: "services"
   }, {
-    label: "Vitrine",
+    label: "Produtos",
     id: "vitrine",
     isRoute: true
   }, {
