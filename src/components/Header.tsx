@@ -64,7 +64,7 @@ const Header = () => {
     label: "Contato",
     id: "contact"
   }];
-  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-white"}`}>
+  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-header/95 backdrop-blur-md shadow-md" : "bg-header"}`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -90,7 +90,7 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && <div className="md:hidden bg-white border-t border-border shadow-lg">
+      {isMobileMenuOpen && <div className="md:hidden bg-header border-t border-border shadow-lg">
           <nav className="container mx-auto px-4 py-6 flex flex-col gap-4">
             {menuItems.map(item => <button key={item.id} onClick={() => handleNavigation(item.id, item.isRoute)} className="text-left text-foreground/80 hover:text-foreground transition-colors duration-200 font-medium py-2">
                 {item.label}
