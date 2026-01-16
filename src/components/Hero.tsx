@@ -77,7 +77,7 @@ const Hero = () => {
               onClick={() => navigate("/vitrine")}
               className="bg-accent hover:bg-accent/90 text-white text-base sm:text-lg px-6 py-5 sm:px-8 sm:py-6 shadow-glow hover:scale-105 transition-all duration-300"
             >
-              Ver nossa vitrine
+              Ver catálogo de produtos
             </Button>
             <Button
               size="lg"
