@@ -29,7 +29,7 @@ const Vitrine = () => {
             height: 'calc(100vh - 80px - 63px)',
             border: 'none'
           }}
-          title="Demonstração de Vitrine"
+          title="Catálogo de Produtos"
         />
         
         {/* Badge MonteSite - carregado automaticamente */}

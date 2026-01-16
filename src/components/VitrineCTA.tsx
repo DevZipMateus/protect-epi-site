@@ -23,7 +23,7 @@ const VitrineCTA = () => {
               </div>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 px-4">
-              Conheça nossa vitrine online
+              Conheça nosso catálogo de produtos
             </h2>
             <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto px-4">
               Explore nosso catálogo completo de EPIs com preços atualizados em tempo real
@@ -75,7 +75,7 @@ const VitrineCTA = () => {
               onClick={() => navigate("/vitrine")}
               className="bg-accent hover:bg-accent/90 text-white text-lg sm:text-xl px-8 py-6 sm:px-12 sm:py-8 shadow-glow hover:scale-105 transition-all duration-300 group w-full sm:w-auto"
             >
-              Acessar vitrine agora
+              Acessar catálogo de produtos
               <ArrowRight className="ml-2 w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform" />
             </Button>
             <p className="text-white/60 mt-4 text-xs sm:text-sm">
